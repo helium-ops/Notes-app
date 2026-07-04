@@ -1,2 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --white: #EDE9E9;
+    --black: #272323;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--white);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    height: 196px;
+    width: 100%;
+    position: fixed;
+    top: 2px;
+}
+
+header h1{
+    font-size: 33.6px;
+}
+
+header .inputs{
+    height: 54px;
+    width: 390px;
+    border-radius: 40px;
+    border: none;
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .inputs input{
+    height: 100%;
+    width: 337px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+header .inputs input::placeholder{
+    font-size: 20.59px;
+    color: var(--white);
+}
+
