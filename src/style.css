@@ -28,7 +28,7 @@ header{
     gap: 40px;
     height: 196px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 2px;
 }
 
@@ -63,3 +63,63 @@ header .inputs input::placeholder{
     color: var(--white);
 }
 
+.inputs .add-btn{
+  height: 53px;
+  width: 54px;
+  background: transparent;
+  color: var(--white);
+  text-align: center;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400px;
+  transition: 0.3s;
+}
+
+.add-btn:hover{
+    background: var(--white);
+    color: var(--black);
+    opacity: 0.7;
+}
+
+.note-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    height: calc(100vh - 196px);
+    position: absolute;
+    bottom: 2px;
+    overflow-y: auto;
+}
+
+/* js styling */
+
+.note{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 316px;
+    width: 295px;
+    border: 3px solid var(--black);
+    border-radius: 40px;
+}
+
+.note button{
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+    color: var(--black);
+    background: var(--white);
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.note button:hover{
+    background: var(--black);
+    color: var(--white);
+}
