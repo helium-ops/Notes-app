@@ -22,7 +22,11 @@ const createTask =  ()=>{
 }
 addBtn.addEventListener("click", createTask);
 
-
+input.addEventListener("keyup", (e)=>{
+    if(e.key === "Enter"){
+        createTask();
+    }
+})
 
 const addTitle = (e)=>{
     if(e.target.closest(".note")){
