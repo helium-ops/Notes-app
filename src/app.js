@@ -30,12 +30,12 @@ input.addEventListener("keyup", (e)=>{
 
 const addTitle = (e)=>{
     if(e.target.closest(".note")){
-      const note = document.querySelector(".note");
-      const titleArea = document.querySelector(".note input");
+      const note = e.target.closest(".note");;
+      const titleArea = note.querySelector("input");
       titleArea.addEventListener("keyup",(e)=>{
         if(e.key === "Enter"){
             const title = titleArea.value;
-            document.querySelector(".title-view").innerHTML = `
+            note.querySelector(".title-view").innerHTML = `
             <h1>${title}</h1>
     <button class="view"><i class="fa-solid fa-arrows-to-eye"></i></button>
             `
@@ -44,13 +44,14 @@ const addTitle = (e)=>{
     }
 }
 
-notesArea.addEventListener("click", addTitle)
-notesArea.addEventListener("click", (e)=>{
-    if(e.target.closest(".note")){
-      const note = document.querySelector(".note");
-      const viewBtn = document.querySelector(".view");
-      viewBtn.addEventListener("click", ()=>{
+notesArea.addEventListener("click", addTitle);
+notesArea.addEventListener("click", (e) => {
+    const viewBtn = e.target.closest(".view");
+
+    if (viewBtn) {
+        const note = viewBtn.closest(".note");
+        console.log(note);
+
         window.location.href = "../view-task-area/view-task.html";
-      })
     }
-})
+});
